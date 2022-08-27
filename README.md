@@ -9,7 +9,7 @@ return x\y
 
 # class is the blueprint -->human is the bluprint
 
-# Object what we are seeing ->> from this blueprint we create different types of class
+# Object what we are seeing ->> from this blueprint we create different types of humans
 
 # when you called a def inside a class it is called method and when its called outside class it is called function
 
