@@ -9,6 +9,9 @@ class Item:
     def calculate_item(self):
         return self.price*self.quantity
 
+    def summary(self):
+        return f"Name:{self.name}"
+
     # represent object as it is
     def __repr__(self):
         pass
@@ -29,7 +32,7 @@ item1 = Item("John", 100)
 # item1.price = 100
 
 print(item1.calculate_item())
-
+print(item1.summary())
 
 # second instance
 
@@ -45,3 +48,28 @@ print(item1.name + ' ' + item2.name)
 print(item2.hasNumPad)
 
 print(Item.pay_rate)
+
+
+class Student(Item):
+    def __init__(self, name, price, quantity, email):
+        super().__init__(name, price, quantity)
+        self.email = email
+
+    # method override
+    def summary(self):
+        return f"Name:{self.name} price:{self.price} Email:{self.email}"
+
+    # _str_
+    def __str__(self):
+        return f"Name:{self.name} price:{self.price} Email:{self.email}"
+    # repr doing the same as str
+
+    def __repr__(self):
+        return f"Name:{self.name} price:{self.price} Email:{self.email}"
+
+
+s1 = Student("Farshid", 100, 11, "arnob.farshid@gmail.com")
+s2 = Student("Farshid", 100, 11, "arnob22.farshid@gmail.com")
+print(s1.summary())
+print(s1)
+print(s2)

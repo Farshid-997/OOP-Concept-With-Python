@@ -74,3 +74,39 @@ print(type(item1))#int type
 def instantiate_from_csv(cls):
 pass
 print(item1.calculate_item())
+
+# Encapsulation
+
+1. We can set the data or the function as a private like (\_\_name) so it means name is private value. internally python represents these double underscore by using some name that's why we can't access them directly.
+2. we can't access these private values or function directly
+3. also we can use setter and getter method to access them
+4. we can't get any values from setter method but we can get the values from getter method.
+
+# Inheritance
+
+1. Inherit all the variables and method from parent class to child class
+
+# Method overriding
+
+1. Override the parent method in child class and customize it
+2. **str** convert refrence into an object
+3. repr doing the same thing
+
+# method overloading
+
+1. method overloading means multiple methods can have same name with different parameters
+
+int myMethod(int x)
+float myMethod(float x)
+double myMethod(double x, double y)
+
+# static method and class method
+
+1. static method call as @staticmethid and it will never send an object as first argument
+2. class method will send a class refrence as a argument
+
+# Polymorphism
+
+1 . it means we have "many form" and it occurs when we have many clasees that are related to each other by inheritence
+
+2.  Inheritance let's us inherit attributes and methods from another class. Polymorphism uses those methods to perform different tasks. This allows us to perform a single action in different ways.
