@@ -1,26 +1,47 @@
 class Item:
-    def __init__(self):
-        print("I am created")
+    pay_rate = 0.9  # class attribute
 
-    def calculate_item(self, x, y):
-        return x*y
+    def __init__(self, name, price, quantity=0):
+        self.name = name
+        self.price = price
+        self.quantity = quantity
+
+    def calculate_item(self):
+        return self.price*self.quantity
+
+    # represent object as it is
+    def __repr__(self):
+        pass
+
+    # from this decorator we can use decorator to say this classmethod
+    # this cls will represent the class instead of instance
+    @classmethod
+    def instantiate_from_csv(cls):
+        pass
 
 
-item1 = Item()
-item1.name = "John"
+Item.instantiate_from_csv()
+item1 = Item("John", 100)
 
-item1.quantity = 5
-item1.price = 100
+# item1.name = "John"
 
-print(item1.calculate_item(item1.price, item1.quantity))
+# item1.quantity = 5
+# item1.price = 100
+
+print(item1.calculate_item())
 
 
 # second instance
 
-item2 = Item()
-item2.name = "John cw"
+item2 = Item("john cw", 1001, 51)
+item2.hasNumPad = False
+# item2.name = "John cw"
 
-item2.quantity = 51
-item2.price = 1001
+# item2.quantity = 51
+# item2.price = 1001
 
-print(item2.calculate_item(item2.price, item2.quantity))
+print(item2.calculate_item())
+print(item1.name + ' ' + item2.name)
+print(item2.hasNumPad)
+
+print(Item.pay_rate)
