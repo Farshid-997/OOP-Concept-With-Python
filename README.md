@@ -110,3 +110,30 @@ double myMethod(double x, double y)
 1 . it means we have "many form" and it occurs when we have many clasees that are related to each other by inheritence
 
 2.  Inheritance let's us inherit attributes and methods from another class. Polymorphism uses those methods to perform different tasks. This allows us to perform a single action in different ways.
+
+# Abstraction
+
+1. Data abstraction is the process of hiding certain details and showing only essential information to the user.
+
+---> he abstract keyword is a non-access modifier, used for classes and methods:
+
+2. Abstract class: is a restricted class that cannot be used to create objects (to access it, it must be inherited from another class).
+
+3. Abstract method: can only be used in an abstract class, and it does not have a body. The body is provided by the subclass (inherited from).
+
+# Interface
+
+1. Another way to achieve abstraction is with interfaces.
+
+An interface is a completely "abstract class" that is used to group related methods with empty bodies:
+
+----->>>>>>>>>> Like abstract classes, interfaces cannot be used to create objects (in the example above, it is not possible to create an "Animal" object in the MyMainClass)
+Interface methods do not have a body - the body is provided by the "implement" class
+On implementation of an interface, you must override all of its methods
+Interface methods are by default abstract and public.
+
+---
+
+Why And When To Use Interfaces?
+
+1. To achieve security - hide certain details and only show the important details of an object (interface).
